@@ -1,0 +1,18 @@
+{
+  "name": "typescript-example",
+  "version": "1.0.0",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "npm run copy-html && tsc",
+    "start": "npm run build && npx http-server dist -o",
+    "dev": "concurrently \"npm run copy-html:watch\" \"tsc --watch\" \"npx http-server dist -p 8082 -o\"",
+    "copy-html": "copyfiles -u 1 src/index.html dist/",
+    "copy-html:watch": "copyfiles -w -u 1 src/index.html dist/"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "http-server": "^14.1.1",
+    "concurrently": "^8.2.0",
+    "copyfiles": "^2.4.1"
+  }
+}

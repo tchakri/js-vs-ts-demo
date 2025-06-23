@@ -1,0 +1,11 @@
+{
+  "name": "javascript-example",
+  "version": "1.0.0",
+  "main": "index.html",
+  "scripts": {
+    "dev": "live-server --port=8081 --open=./index.html"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
